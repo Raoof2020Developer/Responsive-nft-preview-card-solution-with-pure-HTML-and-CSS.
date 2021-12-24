@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | NFT preview card component</title>
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
+    * {
+      padding: 0;
+      margin: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Roboto', sans-serif;
+      color: #fff;
+      background-color: hsl(217, 54%, 11%);
+      width: 100vw;
+      height: 100vh;
+    }
+
+    a {
+      text-decoration: none;
+    }
+
+    .card-box {
+      width: 320px;
+      height: fit-content;
+      border-radius: 10px;
+      padding: 10px 16px;
+      background-color: hsl(216, 50%, 16%);
+      margin: 50px auto 0 auto;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .card-box .col-1 .image-wrap {
+      cursor: pointer;
+      position: relative;
+      height: 310px;
+    }
+
+    .card-box .col-1 .img {
+      width: 100%;
+      border-radius: 10px;
+      transition-duration: 1s;
+    } 
+
+    .card-box .col-1 .wrap {
+      width: 80px;
+      position: relative;
+      transform: translate(105px,-180px);
+      opacity: 0;
+      transition-duration: .5s;
+    }
+
+    .card-box .col-1 .image-wrap:hover .img {
+      opacity: 30%;
+    }
+
+    .card-box .col-1 .image-wrap:hover .wrap {
+      opacity: 1;
+    }
+
+    .card-box .col-2 h1 {
+      color: #fff;
+      font-size: 1.6rem;
+    }
+
+    .card-box .col-2 p {
+      color: hsl(215, 51%, 70%);
+    }
+
+    .card-box .col-2 .space-btwn {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .card-box .col-2 .space-btwn .right span {
+      color: cyan;
+      font-weight: 500;
+      position: relative;
+      bottom: 2px;
+    }
+
+    .card-box .col-2 .space-btwn .left span {
+      color: hsl(215, 51%, 70%);
+      font-weight: 500;
+      position: relative;
+      bottom: 2px;
+    }
+
+    .line {
+      height: 2px;
+      background-color: hsl(215, 32%, 27%);
+      margin: 10px 0;
+    }
+
+    .card-box .col-3 img{
+      height: 32px;
+      border: 2px solid #fff;
+      border-radius: 50%;
+    }
+
+    .card-box .col-3 p {
+      color: hsl(215, 51%, 70%);
+      display: inline;
+      position: relative;
+      bottom: 9px;
+    }
+
+    .card-box .col-3 p span {
+      color: white;
+      font-weight: 700;
+    }
+
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+    #author {
+      font-size: 1rem;
+      font-weight: bold;
+      color: rgb(198, 255, 245);
+      background-color: rgb(255, 8, 8);
+    }
+  </style>
+</head>
+<body>
+  <div class="card-box">
+      <div class="col-1">
+        <div class="image-wrap">
+          <img src="/images/image-equilibrium.jpg" alt="" class="img">
+          <img src="/images/icon-view.svg" alt="" class="wrap">
+        </div>
+      </div>
+      <div class="col-2">
+        <h1>Equilibrium #3429</h1><br>
+        <p>Our Equilibrium collection promotes balance and calm.</p>
+        <br>
+        <div class="space-btwn">
+          <div class="right">
+            <img src="/images/icon-ethereum.svg" alt="">
+            <span>0.041 ETH</span>
+          </div>
+          <div class="left">
+            <img src="/images/icon-clock.svg" alt="">
+            <span>3 days left</span>
+          </div>
+        </div>
+      </div>
+      <div class="line"></div>
+      <div class="col-3">
+        <img src="/images/image-avatar.png" alt="">
+        <p>&nbspCreation of <span>Jules Wyvern</span></p>
+      </div>
+  </div>
+  
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#" id="author">HECHAICHI AbdErraOof</a>.
+  </div>
+</body>
+</html>
